@@ -42,7 +42,7 @@ class ProfileController extends Controller
             $result = Cloudinary::uploadApi()->upload(
                 $request->file('avatar')->getRealPath(),
                 [
-                    'folder' => 'biokuy/avatars',
+                    'folder' => 'bioku/avatars',
                 ]
             );
 
