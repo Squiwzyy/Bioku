@@ -16,13 +16,13 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased">
-    <div class="min-h-screen relative" style="background: linear-gradient(145deg, var(--color-surface-base) 0%, var(--color-surface-muted) 50%, oklch(0.95 0.02 165 / 0.3) 100%);">
+    <div class="min-h-screen relative" style="background-color: var(--color-surface-base);">
 
-        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, var(--color-text-primary) 1px, transparent 0); background-size: 32px 32px;"></div>
+        <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(circle at 1px 1px, var(--color-text-primary) 1px, transparent 0); background-size: 32px 32px;"></div>
 
         <div class="absolute top-0 left-0 p-6 z-10">
             <a href="{{ url('/') }}" class="flex items-center gap-2.5 group" id="guest-logo">
-                <div class="flex items-center justify-center w-9 h-9 rounded-xl bg-brand-primary text-white font-bold text-lg transition-transform duration-200 group-hover:scale-105">
+                <div class="flex items-center justify-center w-9 h-9 rounded-full bg-brand-primary text-black font-bold text-lg transition-transform duration-200 group-hover:scale-105">
                     B
                 </div>
                 <span class="text-lg font-bold text-text-primary tracking-tight">BioKuy</span>
@@ -33,8 +33,8 @@
             {{ $slot }}
         </div>
 
-        <div class="fixed bottom-0 left-0 w-96 h-96 rounded-full opacity-[0.07] blur-3xl pointer-events-none" style="background: var(--color-brand-primary);"></div>
-        <div class="fixed top-0 right-0 w-80 h-80 rounded-full opacity-[0.05] blur-3xl pointer-events-none" style="background: var(--color-brand-secondary);"></div>
+        <div class="fixed bottom-0 left-0 w-96 h-96 rounded-full opacity-[0.1]" style="background: radial-gradient(circle, var(--color-brand-primary) 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
+        <div class="fixed top-0 right-0 w-80 h-80 rounded-full opacity-[0.05]" style="background: radial-gradient(circle, #ffffff 0%, transparent 70%); filter: blur(80px); pointer-events: none;"></div>
     </div>
 </body>
 </html>

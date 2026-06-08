@@ -7,9 +7,9 @@
                 <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
                 Link-in-Bio untuk semua orang
             </div>
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-4">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-4" style="font-family: var(--font-title);">
                 Satu Link.<br>
-                <span class="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">Semua Platform.</span>
+                <span class="text-brand-primary">Semua Platform.</span>
             </h1>
             <p class="text-lg text-text-secondary max-w-lg mx-auto mb-8">
                 Buat halaman link-in-bio profesional dalam hitungan menit. Gratis untuk memulai.
@@ -68,8 +68,8 @@
                     </a>
                 </div>
 
-                <div class="card-hover flex flex-col justify-between p-8 relative border-2 border-brand-primary bg-surface-elevated overflow-hidden shadow-elevated">
-                    <div class="absolute top-0 right-0 bg-brand-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-bl-lg">
+                <div class="card-hover flex flex-col justify-between p-8 relative border border-brand-primary bg-surface-elevated overflow-hidden shadow-elevated">
+                    <div class="absolute top-0 right-0 bg-brand-primary text-black text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-bl-lg">
                         Populer
                     </div>
                     <div>
@@ -101,7 +101,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="{{ auth()->check() ? route('billing.index', ['plan' => 'student']) : route('register', ['plan' => 'student']) }}" class="btn-primary w-full justify-center mt-8 bg-brand-secondary hover:bg-brand-secondary-hover">
+                    <a href="{{ auth()->check() ? route('billing.index', ['plan' => 'student']) : route('register', ['plan' => 'student']) }}" class="btn-primary w-full justify-center mt-8">
                         Pilih Student
                     </a>
                 </div>
@@ -136,7 +136,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="{{ auth()->check() ? route('billing.index', ['plan' => 'pro']) : route('register', ['plan' => 'pro']) }}" class="btn-primary w-full justify-center mt-8">
+                    <a href="{{ auth()->check() ? route('billing.index', ['plan' => 'pro']) : route('register', ['plan' => 'pro']) }}" class="btn-secondary w-full justify-center mt-8">
                         Pilih Pro
                     </a>
                 </div>

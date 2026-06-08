@@ -10,52 +10,56 @@
    ============================================================ */
 @theme {
     /* Typography */
-    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'SpotifyMixUI', 'CircularSp-Arab', 'CircularSp-Hebr', 'CircularSp-Cyrl', 'CircularSp-Grek', 'CircularSp-Deva', 'Helvetica Neue', helvetica, arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, 'MS Gothic', sans-serif;
+    --font-title: 'SpotifyMixUITitle', 'CircularSp-Arab', 'CircularSp-Hebr', 'CircularSp-Cyrl', 'CircularSp-Grek', 'CircularSp-Deva', 'Helvetica Neue', helvetica, arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, 'MS Gothic', sans-serif;
 
     /* Brand Colors */
-    --color-brand-primary: oklch(0.65 0.18 165);
-    --color-brand-primary-hover: oklch(0.58 0.18 165);
-    --color-brand-primary-light: oklch(0.92 0.05 165);
-    --color-brand-secondary: oklch(0.55 0.15 240);
-    --color-brand-secondary-hover: oklch(0.48 0.15 240);
-    --color-brand-secondary-light: oklch(0.92 0.05 240);
+    --color-brand-primary: #1ed760;
+    --color-brand-primary-hover: #1db954; /* slightly darker green for hover */
+    --color-brand-primary-light: #1ed760;
+    --color-brand-secondary: #181818;
+    --color-brand-secondary-hover: #1f1f1f;
+    --color-brand-secondary-light: #252525;
 
     /* Surface Colors */
-    --color-surface-base: oklch(0.98 0 0);
-    --color-surface-elevated: oklch(1 0 0);
-    --color-surface-muted: oklch(0.96 0 0);
-    --color-surface-dark: oklch(0.14 0 0);
-    --color-surface-sidebar: oklch(0.12 0.02 240);
+    --color-surface-base: #121212;
+    --color-surface-elevated: #181818;
+    --color-surface-muted: #1f1f1f;
+    --color-surface-dark: #252525;
+    --color-surface-sidebar: #121212;
 
     /* Text Colors */
-    --color-text-primary: oklch(0.15 0 0);
-    --color-text-secondary: oklch(0.45 0 0);
-    --color-text-muted: oklch(0.65 0 0);
-    --color-text-inverse: oklch(0.98 0 0);
-    --color-text-brand: oklch(0.65 0.18 165);
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #b3b3b3;
+    --color-text-muted: #7c7c7c;
+    --color-text-inverse: #ffffff;
+    --color-text-brand: #1ed760;
 
     /* Border Colors */
-    --color-border: oklch(0.90 0 0);
-    --color-border-focus: oklch(0.65 0.18 165);
+    --color-border: #4d4d4d;
+    --color-border-focus: #000000;
+    --color-border-light: #7c7c7c;
 
     /* Status Colors */
-    --color-success: oklch(0.65 0.18 145);
-    --color-warning: oklch(0.75 0.15 75);
-    --color-danger: oklch(0.60 0.20 25);
-    --color-info: oklch(0.60 0.15 240);
+    --color-success: #1ed760;
+    --color-warning: #ffa42b;
+    --color-danger: #f3727f;
+    --color-info: #539df5;
 
     /* Radius */
-    --radius-card: 1.25rem;
-    --radius-btn: 0.75rem;
-    --radius-input: 0.625rem;
-    --radius-badge: 0.5rem;
+    --radius-card: 8px;
+    --radius-btn: 500px; /* large pill */
+    --radius-btn-small: 9999px; /* full pill */
+    --radius-input: 500px; /* pill */
+    --radius-badge: 2px;
     --radius-full: 9999px;
+    --radius-circle: 50%;
 
     /* Shadows */
-    --shadow-card: 0 4px 24px oklch(0 0 0 / 0.06);
-    --shadow-elevated: 0 8px 40px oklch(0 0 0 / 0.10);
-    --shadow-input: 0 1px 3px oklch(0 0 0 / 0.04);
-    --shadow-sidebar: 4px 0 24px oklch(0 0 0 / 0.08);
+    --shadow-card: rgba(0,0,0,0.3) 0px 8px 8px;
+    --shadow-elevated: rgba(0,0,0,0.5) 0px 8px 24px;
+    --shadow-input: rgb(18,18,18) 0px 1px 0px, rgb(124,124,124) 0px 0px 0px 1px inset;
+    --shadow-sidebar: rgba(0,0,0,0.5) 4px 0 24px;
 
     /* Sidebar */
     --sidebar-width: 260px;
@@ -67,24 +71,22 @@
    ============================================================ */
 @utility card {
     background-color: var(--color-surface-elevated);
-    border: 1px solid var(--color-border);
+    border: none;
     border-radius: var(--radius-card);
-    box-shadow: var(--shadow-card);
     padding: 1.5rem;
 }
 
 @utility card-hover {
     background-color: var(--color-surface-elevated);
-    border: 1px solid var(--color-border);
+    border: none;
     border-radius: var(--radius-card);
-    box-shadow: var(--shadow-card);
     padding: 1.5rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-        box-shadow: var(--shadow-elevated);
+        background-color: var(--color-surface-dark);
+        box-shadow: var(--shadow-card);
         transform: translateY(-2px);
-        border-color: var(--color-brand-primary-light);
     }
 }
 
@@ -94,25 +96,26 @@
     justify-content: center;
     gap: 0.5rem;
     background-color: var(--color-brand-primary);
-    color: white;
+    color: #000000;
     border: none;
     border-radius: var(--radius-btn);
-    padding: 0.625rem 1.5rem;
-    font-weight: 600;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    padding: 8px 32px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
 
     &:hover {
         background-color: var(--color-brand-primary-hover);
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px oklch(0.65 0.18 165 / 0.3);
+        transform: scale(1.04);
     }
 
     &:active {
-        transform: translateY(0);
+        transform: scale(1);
     }
 
     &:disabled {
@@ -128,25 +131,26 @@
     justify-content: center;
     gap: 0.5rem;
     background-color: transparent;
-    color: var(--color-brand-primary);
-    border: 2px solid var(--color-brand-primary);
-    border-radius: var(--radius-btn);
-    padding: 0.5rem 1.5rem;
-    font-weight: 600;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-btn-small);
+    padding: 4px 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
 
     &:hover {
-        background-color: var(--color-brand-primary);
-        color: white;
-        transform: translateY(-1px);
+        border-color: var(--color-text-primary);
+        transform: scale(1.04);
     }
 
     &:active {
-        transform: translateY(0);
+        transform: scale(1);
     }
 }
 
@@ -158,45 +162,46 @@
     background-color: transparent;
     color: var(--color-text-secondary);
     border: none;
-    border-radius: var(--radius-btn);
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    border-radius: var(--radius-btn-small);
+    padding: 8px 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.15s ease;
     text-decoration: none;
 
     &:hover {
-        background-color: var(--color-surface-muted);
         color: var(--color-text-primary);
+        transform: scale(1.04);
     }
 }
 
 @utility input-field {
     width: 100%;
-    background-color: var(--color-surface-elevated);
-    border: 1px solid var(--color-border);
+    background-color: var(--color-surface-muted);
+    border: none;
     border-radius: var(--radius-input);
-    padding: 0.625rem 0.875rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.5;
     color: var(--color-text-primary);
     box-shadow: var(--shadow-input);
     transition: all 0.2s ease;
     outline: none;
 
     &::placeholder {
-        color: var(--color-text-muted);
+        color: var(--color-text-secondary);
     }
 
     &:focus {
-        border-color: var(--color-brand-primary);
-        box-shadow: 0 0 0 3px oklch(0.65 0.18 165 / 0.15);
+        border: 1px solid var(--color-border-focus);
     }
 
     &:disabled {
-        background-color: var(--color-surface-muted);
+        background-color: var(--color-surface-dark);
         opacity: 0.7;
         cursor: not-allowed;
     }
@@ -206,43 +211,45 @@
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    padding: 0.25rem 0.75rem;
+    padding: 2px 8px;
     border-radius: var(--radius-badge);
-    font-size: 0.75rem;
+    font-size: 10.5px;
     font-weight: 600;
-    line-height: 1rem;
-    background-color: oklch(0.93 0.01 260);
-    color: oklch(0.40 0.03 260);
-    border: 1px solid oklch(0.85 0.02 260);
+    line-height: 1.33;
+    text-transform: capitalize;
+    background-color: var(--color-surface-muted);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
 }
 
 @utility badge-student {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    padding: 0.25rem 0.75rem;
+    padding: 2px 8px;
     border-radius: var(--radius-badge);
-    font-size: 0.75rem;
+    font-size: 10.5px;
     font-weight: 600;
-    line-height: 1rem;
-    background-color: oklch(0.93 0.05 240);
-    color: oklch(0.45 0.15 240);
-    border: 1px solid oklch(0.85 0.08 240);
+    line-height: 1.33;
+    text-transform: capitalize;
+    background-color: var(--color-info);
+    color: #000000;
+    border: none;
 }
 
 @utility badge-pro {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    padding: 0.25rem 0.75rem;
+    padding: 2px 8px;
     border-radius: var(--radius-badge);
-    font-size: 0.75rem;
-    font-weight: 700;
-    line-height: 1rem;
-    background: linear-gradient(135deg, oklch(0.65 0.18 165), oklch(0.55 0.15 200));
-    color: white;
+    font-size: 10.5px;
+    font-weight: 600;
+    line-height: 1.33;
+    text-transform: capitalize;
+    background-color: var(--color-brand-primary);
+    color: #000000;
     border: none;
-    box-shadow: 0 2px 8px oklch(0.65 0.18 165 / 0.25);
 }
 
 /* ============================================================
@@ -255,7 +262,7 @@
     }
 
     ::selection {
-        background-color: oklch(0.65 0.18 165 / 0.2);
+        background-color: rgba(30, 215, 96, 0.3); /* Spotify Green transparent */
         color: var(--color-text-primary);
     }
 
@@ -275,12 +282,12 @@
     }
 
     ::-webkit-scrollbar-thumb {
-        background: oklch(0.75 0 0);
+        background: var(--color-border);
         border-radius: 3px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: oklch(0.60 0 0);
+        background: var(--color-border-light);
     }
 }
 

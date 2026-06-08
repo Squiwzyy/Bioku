@@ -109,7 +109,7 @@
             style="width: var(--sidebar-width);"
         >
             <div class="sidebar-header flex items-center gap-3 px-6 py-5 border-b border-white/10 transition-all duration-300">
-                <div class="flex items-center justify-center w-9 h-9 rounded-xl bg-brand-primary text-white font-bold text-lg shrink-0">
+                <div class="flex items-center justify-center w-9 h-9 rounded-full bg-brand-primary text-black font-bold text-lg shrink-0">
                     B
                 </div>
                 <span id="sidebar-logo-text" class="text-lg font-bold tracking-tight whitespace-nowrap overflow-hidden transition-all duration-300">
