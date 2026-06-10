@@ -3,7 +3,7 @@
     <x-slot:header>Pembayaran Tertunda</x-slot:header>
 
     <div class="animate-fade-in max-w-md mx-auto text-center py-10">
-        <div class="card p-8 bg-white border border-border shadow-elevated">
+        <div class="card p-8 border border-border shadow-elevated">
             {{-- Pending Icon --}}
             <div class="w-20 h-20 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-6 text-warning animate-scale-in">
                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">

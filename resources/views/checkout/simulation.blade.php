@@ -3,7 +3,7 @@
     <x-slot:header>Simulasi Pembayaran (Midtrans SandBox)</x-slot:header>
 
     <div class="animate-fade-in max-w-xl mx-auto">
-        <div class="card p-6 border border-border shadow-elevated bg-white">
+        <div class="card p-6 border border-border shadow-elevated">
             <div class="text-center pb-6 border-b border-border mb-6">
                 <div class="w-12 h-12 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center mx-auto mb-3">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>

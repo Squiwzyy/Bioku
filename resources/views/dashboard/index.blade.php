@@ -164,7 +164,7 @@
             {{-- Quick Analytics --}}
             <div>
                 @if(auth()->user()->getActivePlan() === \App\Enums\PlanEnum::Pro)
-                    <div class="card p-5 bg-white border border-border h-full flex flex-col justify-between">
+                    <div class="card p-5 border border-border h-full flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <h3 class="font-bold text-text-primary text-sm">Tautan Terpopuler</h3>
@@ -193,8 +193,8 @@
                     </div>
                 @else
                     {{-- Locked state --}}
-                    <div class="card p-5 bg-white border border-border relative overflow-hidden h-full min-h-[170px] flex flex-col justify-center">
-                        <div class="absolute inset-0 bg-white/80 backdrop-blur-[1px] flex flex-col items-center justify-center text-center p-4 z-10">
+                    <div class="card p-5 border border-border relative overflow-hidden h-full min-h-[170px] flex flex-col justify-center">
+                        <div class="absolute inset-0 bg-surface-base/85 backdrop-blur-[1px] flex flex-col items-center justify-center text-center p-4 z-10">
                             <svg class="w-7 h-7 text-brand-primary mb-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                             <h5 class="font-bold text-text-primary text-[11px]">Analitik Pengunjung</h5>
                             <p class="text-[9px] text-text-muted max-w-[170px] mt-0.5 mb-2.5">
@@ -207,19 +207,19 @@
 
                         {{-- Blurred dummy --}}
                         <div class="filter blur-[3px] select-none space-y-3">
-                            <div class="flex justify-between text-[9px]">
+                            <div class="flex justify-between text-[9px] text-text-primary">
                                 <span>Portfolio Web</span>
                                 <span>382 klik</span>
                             </div>
-                            <div class="w-full bg-slate-100 h-1 rounded-full">
-                                <div class="bg-slate-300 h-1 rounded-full" style="width: 70%"></div>
+                            <div class="w-full bg-surface-muted h-1 rounded-full">
+                                <div class="bg-border h-1 rounded-full" style="width: 70%"></div>
                             </div>
-                            <div class="flex justify-between text-[9px]">
+                            <div class="flex justify-between text-[9px] text-text-primary">
                                 <span>Instagram Profile</span>
                                 <span>145 klik</span>
                             </div>
-                            <div class="w-full bg-slate-100 h-1 rounded-full">
-                                <div class="bg-slate-300 h-1 rounded-full" style="width: 35%"></div>
+                            <div class="w-full bg-surface-muted h-1 rounded-full">
+                                <div class="bg-border h-1 rounded-full" style="width: 35%"></div>
                             </div>
                         </div>
                     </div>

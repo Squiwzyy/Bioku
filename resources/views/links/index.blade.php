@@ -47,7 +47,7 @@
                 <div id="links-container" class="space-y-3">
                     @forelse($links as $link)
                         <div 
-                            class="card flex items-center justify-between p-4 bg-white transition-all duration-200 border border-border rounded-2xl hover:border-brand-primary/30 drag-item"
+                            class="card flex items-center justify-between p-4 transition-all duration-200 border border-border rounded-2xl hover:border-brand-primary/30 drag-item"
                             draggable="true"
                             data-id="{{ $link->id }}"
                         >
@@ -80,7 +80,7 @@
                                     @csrf
                                     @method('PATCH')
                                     <button type="submit" class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none {{ $link->is_active ? 'bg-brand-primary' : 'bg-border' }}" role="switch" aria-checked="{{ $link->is_active ? 'true' : 'false' }}">
-                                        <span aria-hidden="true" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out {{ $link->is_active ? 'translate-x-5' : 'translate-x-0' }}"></span>
+                                        <span aria-hidden="true" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-text-primary shadow-sm ring-0 transition duration-200 ease-in-out {{ $link->is_active ? 'translate-x-5' : 'translate-x-0' }}"></span>
                                     </button>
                                 </form>
 
@@ -119,7 +119,7 @@
                 <h4 class="font-semibold text-text-primary">Analitik Pengunjung</h4>
                 
                 @if(auth()->user()->getActivePlan() === \App\Enums\PlanEnum::Pro)
-                    <div class="card p-5 bg-white border border-border space-y-4">
+                    <div class="card p-5 border border-border space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-semibold text-brand-primary bg-brand-primary/10 px-2.5 py-1 rounded-lg">Real-time</span>
                             <span class="text-xs text-text-muted">30 Hari Terakhir</span>
@@ -146,8 +146,8 @@
                     </div>
                 @else
                     {{-- Premium Feature Lock Overlay --}}
-                    <div class="card p-5 bg-white border border-border relative overflow-hidden min-h-[220px] flex flex-col justify-center">
-                        <div class="absolute inset-0 bg-white/80 backdrop-blur-[1px] flex flex-col items-center justify-center text-center p-5 z-10">
+                    <div class="card p-5 border border-border relative overflow-hidden min-h-[220px] flex flex-col justify-center">
+                        <div class="absolute inset-0 bg-surface-base/85 backdrop-blur-[1px] flex flex-col items-center justify-center text-center p-5 z-10">
                             <svg class="w-8 h-8 text-brand-primary mb-2 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                             <h5 class="font-bold text-text-primary text-xs">Analitik Lanjutan Terkunci</h5>
                             <p class="text-[10px] text-text-muted max-w-[185px] mt-1 mb-3">
@@ -161,26 +161,26 @@
                         {{-- Blurred Dummy content --}}
                         <div class="filter blur-[3px] select-none space-y-4">
                             <div class="flex items-center justify-between">
-                                <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded">Real-time</span>
-                                <span class="text-[10px] text-slate-400">30 Hari Terakhir</span>
+                                <span class="text-[10px] bg-surface-muted px-2 py-0.5 rounded text-text-primary">Real-time</span>
+                                <span class="text-[10px] text-text-muted">30 Hari Terakhir</span>
                             </div>
                             <div class="space-y-3.5 pt-1">
                                 <div class="space-y-1.5">
-                                    <div class="flex justify-between text-[10px] font-medium">
+                                    <div class="flex justify-between text-[10px] font-medium text-text-primary">
                                         <span>Instagram Profile</span>
                                         <span>382 klik</span>
                                     </div>
-                                    <div class="w-full bg-slate-100 h-1.5 rounded-full">
-                                        <div class="bg-slate-300 h-1.5 rounded-full" style="width: 70%"></div>
+                                    <div class="w-full bg-surface-muted h-1.5 rounded-full">
+                                        <div class="bg-border h-1.5 rounded-full" style="width: 70%"></div>
                                     </div>
                                 </div>
                                 <div class="space-y-1.5">
-                                    <div class="flex justify-between text-[10px] font-medium">
+                                    <div class="flex justify-between text-[10px] font-medium text-text-primary">
                                         <span>Portfolio Web</span>
                                         <span>145 klik</span>
                                     </div>
-                                    <div class="w-full bg-slate-100 h-1.5 rounded-full">
-                                        <div class="bg-slate-300 h-1.5 rounded-full" style="width: 35%"></div>
+                                    <div class="w-full bg-surface-muted h-1.5 rounded-full">
+                                        <div class="bg-border h-1.5 rounded-full" style="width: 35%"></div>
                                     </div>
                                 </div>
                             </div>
